@@ -1,5 +1,7 @@
 // ignore_for_file: camel_case_types
 
+import 'package:book_tickets/services/hotel_list.dart';
+import 'package:book_tickets/services/ticket_list.dart';
 import 'package:book_tickets/widgets/ticket_view.dart';
 import 'package:book_tickets/utilitys/app_styles.dart';
 import 'package:flutter/gestures.dart';
@@ -36,70 +38,18 @@ class HomeScreen extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Expanded(
                     child: Row(
-                      children: const [
-                        TicketView(
-                          departureShortName: 'TR',
-                          departureLongName: 'Türkiye  ',
-                          destinationShortName: 'DE',
-                          destinationLongName: 'Almanya',
-                          flightTimeHours: 16,
-                          flightTimeMinutes: 40,
-                          departureDate: '1 MAY',
-                          departureTime: '6:00 PM',
-                          flightNumber: 24,
-                        ),
-                        TicketView(
-                          departureShortName: 'NYC',
-                          departureLongName: 'New-York',
-                          destinationShortName: 'LND',
-                          destinationLongName: '  London',
-                          flightTimeHours: 8,
-                          flightTimeMinutes: 30,
-                          departureDate: '5 MAY',
-                          departureTime: '08:00 AM',
-                          flightNumber: 24,
-                        ),
-                        TicketView(
-                          departureShortName: 'FR',
-                          departureLongName: 'Fransa      ',
-                          destinationShortName: 'BG',
-                          destinationLongName: 'Bulgaristan',
-                          flightTimeHours: 14,
-                          flightTimeMinutes: 45,
-                          departureDate: ' 7 MAY',
-                          departureTime: '14:00 AM',
-                          flightNumber: 24,
-                        ),
-                      ],
+                      children: ticketList.map((singleTicket) => TicketView(ticket: singleTicket)).toList(),
                     ),
                   ),
                 ),
                 const CategorieBarView(title: 'Hotels'),
                 const Gap(10),
                 SingleChildScrollView(
+                  padding: const EdgeInsets.only(left: 12),
                   dragStartBehavior: DragStartBehavior.start,
                   scrollDirection: Axis.horizontal,
                   child: Row(
-                    children: const [
-                      HotelView(
-                        title: 'Tallest Building',
-                        path: 'assets/images/three.png',
-                        place: 'Dubai',
-                        price: 68,
-                      ),
-                      HotelView(
-                        title: 'Global Will',
-                        path: 'assets/images/two.png',
-                        place: 'New York',
-                        price: 45,
-                      ),
-                      HotelView(
-                        title: 'Open Space',
-                        path: 'assets/images/one.png',
-                        place: 'London',
-                        price: 25,
-                      ),
-                    ],
+                    children: hotelList.map((e) => HotelView(hotel: e)).toList(),
                   ),
                 ),
               ],

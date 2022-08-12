@@ -1,4 +1,4 @@
-import 'package:book_tickets/screens/botoom_bar_view.dart';
+import 'package:book_tickets/widgets/botoom_bar_view.dart';
 import 'package:book_tickets/utilitys/app_styles.dart';
 import 'package:flutter/material.dart';
 
