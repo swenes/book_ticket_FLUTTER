@@ -60,7 +60,7 @@ class HotelView extends StatelessWidget {
               style: Styles.headLineStyle3.copyWith(color: Colors.white),
             ),
             const Gap(15),
-            Text("${price ?? 'hata'}/night", style: Styles.headLineStyle1.copyWith(color: Colors.white38)),
+            Text("\$${price ?? 'hata'}/night", style: Styles.headLineStyle1.copyWith(color: Colors.white38)),
           ],
         ));
   }
