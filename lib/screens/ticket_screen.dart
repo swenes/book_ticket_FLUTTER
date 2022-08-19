@@ -3,7 +3,6 @@ import 'package:book_tickets/services/ticket_list.dart';
 import 'package:book_tickets/widgets/ticket_view.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
 
 import '../utilitys/app_layout.dart';
 import '../utilitys/app_styles.dart';
@@ -36,7 +35,7 @@ class TicketScreenView extends StatelessWidget {
                 Container(
                   height: 300,
                   width: size.width * 0.86,
-                  decoration: BoxDecoration(color: Colors.white),
+                  decoration: const BoxDecoration(color: Colors.white),
                   child: Text(
                     'Flutter Dash',
                     style: Styles.headLineStyle2,
