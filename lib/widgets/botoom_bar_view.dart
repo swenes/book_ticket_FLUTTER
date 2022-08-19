@@ -1,6 +1,6 @@
 import 'package:book_tickets/screens/home_screen.dart';
 import 'package:book_tickets/screens/search_screen.dart';
-import 'package:book_tickets/screens/ticket_view.dart';
+import 'package:book_tickets/screens/ticket_screen.dart';
 import 'package:flutter/material.dart';
 
 class BottomBarView extends StatefulWidget {
